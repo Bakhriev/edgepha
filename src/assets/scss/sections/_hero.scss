@@ -1,0 +1,65 @@
+.hero {
+	padding-top: 64px;
+
+	background-color: var(--dark-green);
+	background-image: url("../img/hero_bg.jpg");
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 24px;
+	}
+
+	&__info {
+		grid-column: 4 span;
+	}
+
+	&__title {
+		margin-bottom: 62px;
+
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 48px;
+		line-height: 1.15;
+		letter-spacing: -0.02em;
+		color: var(--white);
+		text-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.16);
+	}
+
+	&__img {
+		grid-column: 4 span;
+
+		height: 502px;
+
+		object-fit: cover;
+		border-radius: 200px 200px 0 0;
+	}
+
+	&__text-wrapper {
+		grid-column: 4 span;
+		color: var(--white);
+		p ~ p {
+			margin-top: 20px;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 32px;
+
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 1.2;
+		letter-spacing: -0.04em;
+		color: var(--light-green);
+	}
+}
+.container {
+}
+.btn {
+}
+.btn-reset {
+}

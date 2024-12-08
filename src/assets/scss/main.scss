@@ -1,0 +1,26 @@
+// fonts
+@use "./fonts/fonts";
+
+// base
+@use "./base/reset";
+@use "./base/typography";
+
+// helpers
+@use "./helpers/vars";
+@use "./helpers/mixins";
+@use "./helpers/utils";
+@use "./helpers/global";
+
+// components
+@use "./components/overlay";
+@use "./components/burger";
+@use "./components/buttons";
+
+@use "./components/header";
+@use "./components/footer";
+
+// Sections
+@use "./sections/hero";
+
+// Pages
+@use "./pages/home";

@@ -1,0 +1,19 @@
+@use "../helpers/mixins" as *;
+
+.btn {
+	padding: 22px 68px;
+	background-color: var(--light-green);
+	border-radius: 74px;
+
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 1.15;
+	letter-spacing: -0.02em;
+	color: var(--heading-dark);
+	transition: background-color 0.2s ease-in-out;
+
+	@include hover {
+		background-color: var(--light-blue);
+	}
+}
