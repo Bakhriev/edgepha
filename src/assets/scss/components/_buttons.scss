@@ -27,3 +27,60 @@
 		font-size: 18px;
 	}
 }
+
+.btn-secondary {
+	border-radius: 50px;
+	background: var(--dark-green);
+	padding: 16px 40px;
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.15;
+	letter-spacing: -0.02em;
+	color: var(--white);
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+
+	transition:
+		color 0.2s ease-in-out,
+		background-color 0.2s ease-in-out;
+
+	@include hover {
+		color: var(--heading-dark);
+		background: var(--light-blue);
+	}
+
+	&:active {
+		scale: 0.99;
+	}
+}
+
+.btn-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	border-radius: 50px;
+	padding: 16px 40px;
+	background: var(--light-green);
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.15;
+	letter-spacing: -0.02em;
+	color: var(--heading-dark);
+
+	transition: background-color 0.2s ease-in-out;
+
+	@include hover {
+		background: var(--light-blue);
+	}
+
+	&:active {
+		scale: 0.99;
+	}
+}
