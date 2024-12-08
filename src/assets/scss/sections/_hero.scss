@@ -1,4 +1,6 @@
 .hero {
+	position: relative;
+
 	padding-top: 64px;
 
 	background-color: var(--dark-green);
@@ -7,10 +9,22 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 
+	@media screen and (max-width: 992px) {
+		padding-top: 40px;
+	}
+
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			gap: 30px;
+		}
 	}
 
 	&__info {
@@ -27,22 +41,72 @@
 		letter-spacing: -0.02em;
 		color: var(--white);
 		text-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.16);
+
+		@media screen and (max-width: 1340px) {
+			margin-bottom: 24px;
+			font-size: 40px;
+		}
+
+		@media screen and (max-width: 1124px) {
+			font-size: 28px;
+		}
+
+		@media screen and (max-width: 992px) {
+			font-size: 24px;
+		}
+	}
+
+	&__btn {
+		@media screen and (max-width: 1124px) {
+			font-size: 20px;
+			padding: 15px 20px;
+		}
 	}
 
 	&__img {
+		margin-top: auto;
 		grid-column: 4 span;
 
 		height: 502px;
+		width: 100%;
 
 		object-fit: cover;
 		border-radius: 200px 200px 0 0;
+
+		@media screen and (max-width: 1124px) {
+			height: 400px;
+		}
+
+		@media screen and (max-width: 992px) {
+			height: 300px;
+		}
+
+		@media screen and (max-width: 768px) {
+			max-width: 300px;
+			order: 1;
+		}
 	}
 
 	&__text-wrapper {
 		grid-column: 4 span;
+		padding-left: 62px;
 		color: var(--white);
+
+		@media screen and (max-width: 992px) {
+			padding-left: 0;
+		}
+
 		p ~ p {
 			margin-top: 20px;
+
+			@media screen and (max-width: 1124px) {
+				&:last-child {
+					display: none;
+					@media screen and (max-width: 768px) {
+						display: block;
+					}
+				}
+			}
 		}
 	}
 
@@ -55,6 +119,11 @@
 		line-height: 1.2;
 		letter-spacing: -0.04em;
 		color: var(--light-green);
+
+		@media screen and (max-width: 992px) {
+			font-size: 24px;
+			margin-bottom: 24px;
+		}
 	}
 }
 .container {

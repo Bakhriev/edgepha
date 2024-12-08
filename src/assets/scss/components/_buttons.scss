@@ -16,4 +16,8 @@
 	@include hover {
 		background-color: var(--light-blue);
 	}
+
+	&:active {
+		scale: 0.99;
+	}
 }
