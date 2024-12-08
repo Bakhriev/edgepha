@@ -1,0 +1,50 @@
+.ad-banner {
+	padding: 22px 0;
+	background: var(--light-green);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+
+	@media screen and (max-width: 768px) {
+		padding: 14px 0;
+	}
+
+	@media screen and (max-width: 768px) {
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+
+	&__title {
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 18px;
+		color: var(--heading-dark);
+		@media screen and (max-width: 768px) {
+			font-size: 14px;
+		}
+	}
+
+	&__text {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 18px;
+		color: var(--heading-dark);
+		@media screen and (max-width: 768px) {
+			font-size: 14px;
+		}
+	}
+
+	&__btn {
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 18px;
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		color: var(--red);
+		@media screen and (max-width: 768px) {
+			font-size: 14px;
+		}
+	}
+}

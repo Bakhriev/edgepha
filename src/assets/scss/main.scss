@@ -15,6 +15,7 @@
 @use "./components/overlay";
 @use "./components/burger";
 @use "./components/buttons";
+@use "./components/ad-banner";
 
 @use "./components/header";
 @use "./components/footer";
@@ -24,3 +25,14 @@
 
 // Pages
 @use "./pages/home";
+
+.ad-banner {
+	&__title {
+	}
+
+	&__text {
+	}
+
+	&__btn {
+	}
+}
