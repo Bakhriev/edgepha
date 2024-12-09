@@ -153,13 +153,25 @@
 			translate: 0;
 			top: 6px;
 		}
+
+		&:hover {
+			&::after {
+				rotate: 0deg;
+			}
+		}
 	}
 }
 
 .menu-item-has-children.active {
+	&:hover {
+		&::after {
+			rotate: 180deg;
+		}
+	}
 	&::after {
 		rotate: 180deg;
 	}
+
 	.sub-menu {
 		display: flex;
 	}

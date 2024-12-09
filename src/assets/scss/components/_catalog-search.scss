@@ -1,0 +1,136 @@
+@use "../helpers/mixins" as *;
+
+.catalog-search {
+	&__title {
+		margin-bottom: 40px;
+
+		@media screen and (max-width: 992px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+
+		@media screen and (max-width: 575px) {
+			flex-direction: column;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		white-space: nowrap;
+
+		padding: 22px 32px;
+
+		border-radius: 95px;
+		background: var(--dark-green);
+		transition:
+			background 0.2s ease-in-out,
+			color 0.2s ease-in-out;
+
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 1.15;
+		letter-spacing: -0.02em;
+		color: var(--white);
+
+		svg {
+			flex-shrink: 0;
+		}
+
+		@include hover {
+			background: var(--light-blue);
+			color: var(--heading-dark);
+		}
+
+		@media screen and (max-width: 768px) {
+			font-size: 18px;
+			padding: 16px 24px;
+		}
+	}
+}
+
+.search-form {
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	padding: 14px 14px 14px 40px;
+
+	border-radius: 90px;
+	background: var(--light-green);
+
+	@media screen and (max-width: 768px) {
+		padding: 14px 14px 14px 24px;
+	}
+
+	@media screen and (max-width: 575px) {
+		padding: 10px 14px 10px 24px;
+	}
+
+	&__input {
+		min-width: 100px;
+		width: 100%;
+
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 1.3;
+		color: var(--heading-dark);
+
+		@media screen and (max-width: 768px) {
+			font-size: 18px;
+		}
+
+		&::placeholder {
+			color: var(--dark-green);
+		}
+	}
+
+	&__btn {
+		padding: 0 15px;
+
+		display: grid;
+		place-items: center;
+
+		max-width: 160px;
+		width: 100%;
+		height: 60px;
+
+		border-radius: 66px;
+		background-color: var(--dark-green);
+		color: var(--white);
+
+		transition:
+			background-color 0.2s ease-in-out,
+			color 0.2s ease-in-out;
+
+		@include hover {
+			background-color: var(--light-blue);
+			color: var(--heading-dark);
+		}
+
+		&:active {
+			scale: 0.99;
+		}
+
+		@media screen and (max-width: 768px) {
+			max-width: 60px;
+			height: 40px;
+
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+}
