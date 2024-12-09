@@ -44,3 +44,31 @@ if (window.innerWidth <= 992) {
 		});
 	});
 }
+
+const accordion = () => {
+	const accordions = document.querySelectorAll(".accordion");
+
+	accordions?.forEach(accordion => {
+		const btn = accordion?.querySelector(".accordion__toggle");
+		const inner = accordion?.querySelector(".accordion__inner");
+
+		btn.addEventListener("click", () => {
+			hideAccordions();
+
+			accordion.classList.add("active");
+
+			inner.style.height = inner.scrollHeight + "px";
+		});
+	});
+
+	const hideAccordions = () => {
+		accordions.forEach(accordion => {
+			const inner = accordion?.querySelector(".accordion__inner");
+
+			inner.style.height = "";
+			accordion?.classList.remove("active");
+		});
+	};
+};
+
+accordion();
