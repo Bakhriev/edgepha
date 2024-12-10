@@ -24,7 +24,24 @@
 	width: 100%;
 }
 
+.container-sm {
+	$width: 886px;
+
+	margin-inline: auto;
+
+	max-width: $width;
+	width: 100%;
+}
+
 .article {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+
+	@media screen and (max-width: 992px) {
+		gap: 20px;
+	}
+
 	ul {
 		margin: 0;
 

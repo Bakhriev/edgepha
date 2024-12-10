@@ -1,0 +1,16 @@
+.tags {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 0 24px;
+}
+
+.tag {
+	padding: 16px 0;
+
+	font-family: var(--second-family);
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 1.3;
+	color: var(--heading-dark);
+	border-bottom: 1px solid var(--gray-blue);
+}
