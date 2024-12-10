@@ -45,7 +45,7 @@ if (window.innerWidth <= 992) {
 	});
 }
 
-const accordion = () => {
+const accordionInit = () => {
 	const accordions = document.querySelectorAll(".accordion");
 
 	accordions?.forEach(accordion => {
@@ -71,4 +71,31 @@ const accordion = () => {
 	};
 };
 
-accordion();
+accordionInit();
+
+const tabInit = () => {
+	const tab = document.querySelector(".tab");
+
+	const btns = tab.querySelectorAll(".tab__btn");
+	const panels = tab?.querySelectorAll(".tab__panel");
+
+	btns.forEach((btn, i) => {
+		btn.addEventListener("click", () => {
+			hideBtns();
+			hidePanels();
+
+			btn.classList.add("active");
+			panels[i].classList.add("active");
+		});
+	});
+
+	const hidePanels = () => {
+		panels.forEach(panel => panel.classList.remove("active"));
+	};
+
+	const hideBtns = () => {
+		btns.forEach(btn => btn.classList.remove("active"));
+	};
+};
+
+tabInit();
